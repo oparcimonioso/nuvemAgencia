@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-text));
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+@layer utilities {
+  :root {
+    --color-bg: 255 255 255; /* RGB para branco */
+    --color-text: 17 24 39; /* RGB para gray-900 */
+  }
+
+  .dark {
+    --color-bg: 17 24 39; /* RGB para gray-900 */
+    --color-text: 243 244 246; /* RGB para gray-100 */
+  }
+}
+
+@media (max-width: 767px) {
+  [data-theme="dark"] .mobile-menu {
+    background-color: rgba(17, 24, 39, 0.98);
+  }
+}
